@@ -1,0 +1,136 @@
+# ─────────────────────────────────────────────
+# Carrera por la Esperanza — Configuration
+# ─────────────────────────────────────────────
+
+# Event metadata
+event:
+  name: "Carrera por la Esperanza"
+  titleLines:
+    - text: "Carrera"
+      faded: false
+    - text: "Por La"
+      faded: true
+    - text: "Esperanza"
+      faded: false
+  tagline: "Carrera Benéfica 2026"
+  date: "2026-03-15"
+  time: "07:00"
+  displayDate: "15 Marzo"
+  displayTime: "7:00 AM"
+  fullDate: "Domingo 15 de Marzo, 2026"
+  maxCapacity: 200
+  registrationDeadline: "10 de marzo"
+
+# Toggle to show "race is over" banner and hide registration form
+raceOver: false
+raceOverMessage: "¡Gracias por participar en la Carrera por la Esperanza 2026! Nos vemos el próximo año."
+
+# Google Forms embed URL for registration
+registrationFormUrl: "https://docs.google.com/forms/d/e/XXXXX/viewform?embedded=true"
+
+# Main location
+location:
+  name: "Explanada de la Parroquia Nuestra Señora de la Paz"
+  description: "Ruta plana por calles aledañas. Estaciones de hidratación cada kilómetro."
+
+# Categories / distancias
+distancias:
+  - id: "3k"
+    name: "Ruta Corta"
+    subtitle: "Caminata / Trote"
+    distance: "3K"
+    price: 120
+    currency: "MXN"
+    description: "Ideal para familias, principiantes o quienes prefieren un ritmo relajado. Puedes caminar, trotar o correr — tú decides."
+    popular: false
+    ctaText: "Elegir 3K"
+    features:
+      - text: "Playera conmemorativa"
+        highlight: false
+      - text: "Medalla de participación"
+        highlight: false
+      - text: "Hidratación y fruta"
+        highlight: false
+      - text: "Apta para niños acompañados"
+        highlight: false
+
+  - id: "5k"
+    name: "Ruta Completa"
+    subtitle: "Carrera"
+    distance: "5K"
+    price: 180
+    currency: "MXN"
+    description: "El recorrido completo para quienes buscan el reto. Ruta plana con estaciones de hidratación cada kilómetro."
+    popular: true
+    ctaText: "Elegir 5K"
+    features:
+      - text: "Playera conmemorativa"
+        highlight: false
+      - text: "Medalla de participación"
+        highlight: false
+      - text: "Hidratación y fruta"
+        highlight: false
+      - text: "Chip de cronometraje"
+        highlight: true
+      - text: "Premiación 1°, 2° y 3° lugar"
+        highlight: true
+  
+  - id: "10k"
+    name: "Ruta Extendida"
+    subtitle: "Carrera"
+    distance: "10K"
+    price: 180
+    currency: "MXN"
+    description: "El recorrido completo para quienes buscan el reto. Ruta plana con estaciones de hidratación cada kilómetro."
+    popular: false
+    ctaText: "Elegir 10K"
+    features:
+      - text: "Playera conmemorativa"
+        highlight: false
+      - text: "Medalla de participación"
+        highlight: false
+      - text: "Hidratación y fruta"
+        highlight: false
+      - text: "Chip de cronometraje"
+        highlight: true
+      - text: "Premiación 1°, 2° y 3° lugar"
+        highlight: true
+
+# Schedule / timeline (ordered array)
+schedule:
+  - time: "6:00"
+    title: "Registro y Entrega de Kits"
+    description: "Recoge tu playera, número de corredor y chip de cronometraje en la explanada de la parroquia."
+    highlight: false
+  - time: "6:45"
+    title: "Calentamiento Grupal"
+    description: "Sesión de estiramiento y calentamiento guiado para preparar el cuerpo."
+    highlight: false
+  - time: "7:00"
+    title: "¡Arrancamos!"
+    description: "Salida simultánea de las rutas 3K y 5K desde la explanada de la parroquia."
+    highlight: true
+  - time: "9:00"
+    title: "Premiación y Rifa"
+    description: "Entrega de trofeos al 1°, 2° y 3° lugar del 5K. Rifa de premios para todos los participantes."
+    highlight: false
+
+# Contacts (array — only available fields are displayed)
+contacts:
+  # - name: "Pastoral Juvenil NSP"
+    # email: "pastoraljuvenil@nsp.org"
+    # phone: "+52 55 1234 5678"
+  - name: "Andrea Rojas"
+    phone: "+52 656 115 6069"
+  - name: "Miguel Loza"
+    phone: "+52 656 638 7524"
+
+
+# Social networks (displayed in footer)
+socialNetworks:
+  - platform: "instagram"
+    url: "https://instagram.com/pastoraljuvenilnsp"
+    label: "Instagram"
+  - platform: "facebook"
+    url: "https://facebook.com/pastoraljuvenilnsp"
+    label: "Facebook"

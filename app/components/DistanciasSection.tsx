@@ -1,3 +1,5 @@
+import type { Distancia } from "../../config/types";
+
 function CheckIcon() {
   return (
     <svg
@@ -22,7 +24,11 @@ function StarIcon() {
   );
 }
 
-export default function DistanciasSection() {
+interface DistanciasSectionProps {
+  distancias: Distancia[];
+}
+
+export default function DistanciasSection({ distancias }: DistanciasSectionProps) {
   return (
     <section id="distancias" className="py-28 bg-paper">
       <div className="max-w-7xl mx-auto px-6">
@@ -44,116 +50,75 @@ export default function DistanciasSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {/* 3K */}
-          <div className="bg-white hover-up group">
-            <div className="bg-ink p-8 relative overflow-hidden">
-              <span className="absolute -right-2 -top-4 font-impact text-[8rem] leading-none text-white/5 select-none">
-                3K
-              </span>
-              <div className="relative">
-                <span className="inline-block px-3 py-1 border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest mb-4">
-                  Caminata / Trote
+          {distancias.map((distancia) => (
+            <div
+              key={distancia.id}
+              className={`bg-white hover-up group ${
+                distancia.popular ? "ring-2 ring-lime" : ""
+              }`}
+            >
+              <div className="bg-ink p-8 relative overflow-hidden">
+                {distancia.popular && (
+                  <div className="absolute top-0 right-0 bg-lime text-ink px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest">
+                    Más Popular
+                  </div>
+                )}
+                <span className="absolute -right-2 -top-4 font-impact text-[8rem] leading-none text-white/5 select-none">
+                  {distancia.distance}
                 </span>
-                <h3 className="font-impact text-5xl text-white uppercase">
-                  Ruta Corta
-                </h3>
-              </div>
-            </div>
-            <div className="p-8">
-              <p className="text-mute text-sm leading-relaxed mb-8">
-                Ideal para familias, principiantes o quienes prefieren un ritmo
-                relajado. Puedes caminar, trotar o correr — tú decides.
-              </p>
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center gap-3 text-sm text-ink/60">
-                  <CheckIcon />
-                  Playera conmemorativa
-                </div>
-                <div className="flex items-center gap-3 text-sm text-ink/60">
-                  <CheckIcon />
-                  Medalla de participación
-                </div>
-                <div className="flex items-center gap-3 text-sm text-ink/60">
-                  <CheckIcon />
-                  Hidratación y fruta
-                </div>
-                <div className="flex items-center gap-3 text-sm text-ink/60">
-                  <CheckIcon />
-                  Apta para niños acompañados
+                <div className="relative">
+                  <span
+                    className={`inline-block px-3 py-1 border text-[10px] font-bold uppercase tracking-widest mb-4 ${
+                      distancia.popular
+                        ? "border-lime/40 text-lime"
+                        : "border-white/20 text-white"
+                    }`}
+                  >
+                    {distancia.subtitle}
+                  </span>
+                  <h3 className="font-impact text-5xl text-white uppercase">
+                    {distancia.name}
+                  </h3>
                 </div>
               </div>
-              <div className="border-t border-soft pt-6 flex items-end justify-between">
-                <p className="font-impact text-4xl text-ink uppercase">
-                  $120 <span className="text-lg text-faint">MXN</span>
+              <div className="p-8">
+                <p className="text-mute text-sm leading-relaxed mb-8">
+                  {distancia.description}
                 </p>
-                <a
-                  href="#inscripcion"
-                  className="bg-ink text-white px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-lime hover:text-ink transition-colors"
-                >
-                  Elegir 3K
-                </a>
+                <div className="space-y-3 mb-8">
+                  {distancia.features.map((feature, i) => (
+                    <div
+                      key={i}
+                      className={`flex items-center gap-3 text-sm ${
+                        feature.highlight
+                          ? "text-ink font-semibold"
+                          : "text-ink/60"
+                      }`}
+                    >
+                      {feature.highlight ? <StarIcon /> : <CheckIcon />}
+                      {feature.text}
+                    </div>
+                  ))}
+                </div>
+                <div className="border-t border-soft pt-6 flex items-end justify-between">
+                  <p className="font-impact text-4xl text-ink uppercase">
+                    ${distancia.price}{" "}
+                    <span className="text-lg text-faint">{distancia.currency}</span>
+                  </p>
+                  <a
+                    href="#inscripcion"
+                    className={`px-6 py-3 text-xs font-bold uppercase tracking-wider transition-colors ${
+                      distancia.popular
+                        ? "bg-lime text-ink hover:bg-ink hover:text-lime"
+                        : "bg-ink text-white hover:bg-lime hover:text-ink"
+                    }`}
+                  >
+                    {distancia.ctaText}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* 5K */}
-          <div className="bg-white hover-up group ring-2 ring-lime">
-            <div className="bg-ink p-8 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-lime text-ink px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest">
-                Más Popular
-              </div>
-              <span className="absolute -right-2 -top-4 font-impact text-[8rem] leading-none text-white/5 select-none">
-                5K
-              </span>
-              <div className="relative">
-                <span className="inline-block px-3 py-1 border border-lime/40 text-lime text-[10px] font-bold uppercase tracking-widest mb-4">
-                  Carrera
-                </span>
-                <h3 className="font-impact text-5xl text-white uppercase">
-                  Ruta Completa
-                </h3>
-              </div>
-            </div>
-            <div className="p-8">
-              <p className="text-mute text-sm leading-relaxed mb-8">
-                El recorrido completo para quienes buscan el reto. Ruta plana
-                con estaciones de hidratación cada kilómetro.
-              </p>
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center gap-3 text-sm text-ink/60">
-                  <CheckIcon />
-                  Playera conmemorativa
-                </div>
-                <div className="flex items-center gap-3 text-sm text-ink/60">
-                  <CheckIcon />
-                  Medalla de participación
-                </div>
-                <div className="flex items-center gap-3 text-sm text-ink/60">
-                  <CheckIcon />
-                  Hidratación y fruta
-                </div>
-                <div className="flex items-center gap-3 text-sm text-ink font-semibold">
-                  <StarIcon />
-                  Chip de cronometraje
-                </div>
-                <div className="flex items-center gap-3 text-sm text-ink font-semibold">
-                  <StarIcon />
-                  Premiación 1°, 2° y 3° lugar
-                </div>
-              </div>
-              <div className="border-t border-soft pt-6 flex items-end justify-between">
-                <p className="font-impact text-4xl text-ink uppercase">
-                  $180 <span className="text-lg text-faint">MXN</span>
-                </p>
-                <a
-                  href="#inscripcion"
-                  className="bg-lime text-ink px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-ink hover:text-lime transition-colors"
-                >
-                  Elegir 5K
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

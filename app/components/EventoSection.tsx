@@ -1,4 +1,11 @@
-export default function EventoSection() {
+import type { ScheduleItem, LocationConfig } from "../../config/types";
+
+interface EventoSectionProps {
+  schedule: ScheduleItem[];
+  location: LocationConfig;
+}
+
+export default function EventoSection({ schedule, location }: EventoSectionProps) {
   return (
     <section id="evento" className="py-28">
       <div className="max-w-7xl mx-auto px-6">
@@ -21,80 +28,35 @@ export default function EventoSection() {
 
         <div className="max-w-3xl mx-auto">
           <div className="space-y-0">
-            {/* 6:00 */}
-            <div className="grid grid-cols-[80px_1fr] gap-6">
-              <div className="flex flex-col items-center">
-                <div className="w-full py-3 bg-ink text-white text-center font-impact text-sm uppercase">
-                  6:00
+            {schedule.map((item, index) => {
+              const isLast = index === schedule.length - 1;
+              return (
+                <div key={index} className="grid grid-cols-[80px_1fr] gap-6">
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={`w-full py-3 text-center font-impact text-sm uppercase ${
+                        item.highlight
+                          ? "bg-lime text-ink"
+                          : "bg-ink text-white"
+                      }`}
+                    >
+                      {item.time}
+                    </div>
+                    {!isLast && (
+                      <div className="w-px flex-1 bg-soft min-h-[24px]"></div>
+                    )}
+                  </div>
+                  <div className={isLast ? "" : "pb-8"}>
+                    <p className="font-impact text-xl uppercase text-ink mb-1">
+                      {item.title}
+                    </p>
+                    <p className="text-faint text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="w-px flex-1 bg-soft min-h-[24px]"></div>
-              </div>
-              <div className="pb-8">
-                <p className="font-impact text-xl uppercase text-ink mb-1">
-                  Registro y Entrega de Kits
-                </p>
-                <p className="text-faint text-sm leading-relaxed">
-                  Recoge tu playera, número de corredor y chip de cronometraje
-                  en la explanada de la parroquia.
-                </p>
-              </div>
-            </div>
-
-            {/* 6:45 */}
-            <div className="grid grid-cols-[80px_1fr] gap-6">
-              <div className="flex flex-col items-center">
-                <div className="w-full py-3 bg-ink text-white text-center font-impact text-sm uppercase">
-                  6:45
-                </div>
-                <div className="w-px flex-1 bg-soft min-h-[24px]"></div>
-              </div>
-              <div className="pb-8">
-                <p className="font-impact text-xl uppercase text-ink mb-1">
-                  Calentamiento Grupal
-                </p>
-                <p className="text-faint text-sm leading-relaxed">
-                  Sesión de estiramiento y calentamiento guiado para preparar el
-                  cuerpo.
-                </p>
-              </div>
-            </div>
-
-            {/* 7:00 */}
-            <div className="grid grid-cols-[80px_1fr] gap-6">
-              <div className="flex flex-col items-center">
-                <div className="w-full py-3 bg-lime text-ink text-center font-impact text-sm uppercase">
-                  7:00
-                </div>
-                <div className="w-px flex-1 bg-soft min-h-[24px]"></div>
-              </div>
-              <div className="pb-8">
-                <p className="font-impact text-xl uppercase text-ink mb-1">
-                  ¡Arrancamos!
-                </p>
-                <p className="text-faint text-sm leading-relaxed">
-                  Salida simultánea de las rutas 3K y 5K desde la explanada de
-                  la parroquia.
-                </p>
-              </div>
-            </div>
-
-            {/* 9:00 */}
-            <div className="grid grid-cols-[80px_1fr] gap-6">
-              <div className="flex flex-col items-center">
-                <div className="w-full py-3 bg-ink text-white text-center font-impact text-sm uppercase">
-                  9:00
-                </div>
-              </div>
-              <div>
-                <p className="font-impact text-xl uppercase text-ink mb-1">
-                  Premiación y Rifa
-                </p>
-                <p className="text-faint text-sm leading-relaxed">
-                  Entrega de trofeos al 1°, 2° y 3° lugar del 5K. Rifa de
-                  premios para todos los participantes.
-                </p>
-              </div>
-            </div>
+              );
+            })}
           </div>
 
           {/* Location card */}
@@ -118,12 +80,9 @@ export default function EventoSection() {
               />
             </svg>
             <div>
-              <p className="text-white font-bold text-sm">
-                Explanada de la Parroquia Nuestra Señora de la Paz
-              </p>
+              <p className="text-white font-bold text-sm">{location.name}</p>
               <p className="text-white/40 text-sm mt-1">
-                Ruta plana por calles aledañas. Estaciones de hidratación cada
-                kilómetro.
+                {location.description}
               </p>
             </div>
           </div>
