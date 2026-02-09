@@ -1,6 +1,7 @@
 import { loadConfig } from "../config";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import RegistrationBanner from "./components/RegistrationBanner";
 import MisionSection from "./components/MisionSection";
 import EventoSection from "./components/EventoSection";
 import DistanciasSection from "./components/DistanciasSection";
@@ -20,12 +21,14 @@ export default function Home() {
         raceOver={config.raceOver}
       />
 
-      {config.raceOver && (
+      {config.raceOver ? (
         <div className="bg-lime text-ink py-6 px-6 text-center">
           <p className="font-impact text-2xl md:text-3xl uppercase">
             {config.raceOverMessage}
           </p>
         </div>
+      ) : (
+        <RegistrationBanner registration={config.registration} />
       )}
 
       <MisionSection />

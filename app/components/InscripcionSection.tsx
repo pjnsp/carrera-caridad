@@ -26,8 +26,7 @@ export default function InscripcionSection({
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
             <p className="text-mute leading-relaxed">
               Inscríbete antes del{" "}
-              <strong className="text-ink">{registrationDeadline}</strong>. Los
-              cupos son limitados y se agotan rápido.
+              <strong className="text-ink">{registrationDeadline}</strong>. Puedes pre-registrarte en el siguiente formulario o en la oficina parroquial. Pasa a la oficina para dejar tu aportación.
             </p>
           </div>
         </div>
@@ -70,7 +69,7 @@ export default function InscripcionSection({
 
               <iframe
                 src={registrationFormUrl}
-                className="w-full min-h-[400px] border border-soft bg-paper"
+                className="w-full min-h-[1000px] border border-soft bg-paper"
                 title="Formulario de inscripción"
               >
                 Cargando…

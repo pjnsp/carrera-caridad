@@ -13,37 +13,44 @@ event:
     - text: "Esperanza"
       faded: false
   tagline: "Carrera Benéfica 2026"
-  date: "2026-03-15"
+  invitation: "Corre, trota o camina. Perfecto para todas las edades. ¡Trae a tu mascota!"
+  date: "2026-05-17"
   time: "07:00"
-  displayDate: "15 Marzo"
+  displayDate: "17 mayo"
   displayTime: "7:00 AM"
-  fullDate: "Domingo 15 de Marzo, 2026"
+  fullDate: "Domingo 17 de mayo, 2026"
   maxCapacity: 200
-  registrationDeadline: "10 de marzo"
+  registrationDeadline: "16 de mayo"
 
 # Toggle to show "race is over" banner and hide registration form
 raceOver: false
 raceOverMessage: "¡Gracias por participar en la Carrera por la Esperanza 2026! Nos vemos el próximo año."
 
 # Google Forms embed URL for registration
-registrationFormUrl: "https://docs.google.com/forms/d/e/XXXXX/viewform?embedded=true"
+registrationFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeBHatDcmNbWfLyBziED359xIvDBWNBvGcbMUIjnUQg12oI4w/viewform?embedded=true"
+
+# Registration pricing (shown in a global banner)
+registration:
+  price: 300
+  currency: "MXN"
+  donationItem: "traer una despensa"
 
 # Main location
 location:
   name: "Explanada de la Parroquia Nuestra Señora de la Paz"
-  description: "Ruta plana por calles aledañas. Estaciones de hidratación cada kilómetro."
+  description: "Calle Rancho el Retiro Sur 3517, Pradera Dorada. CP 32618"
 
 # Categories / distancias
 distancias:
   - id: "3k"
-    name: "Ruta Corta"
+    name: "Ruta 3K"
     subtitle: "Caminata / Trote"
     distance: "3K"
-    price: 120
-    currency: "MXN"
     description: "Ideal para familias, principiantes o quienes prefieren un ritmo relajado. Puedes caminar, trotar o correr — tú decides."
+    routeDescription: "Inicia el recorrido en la parroquia hasta el AutoZone de la calle Ejército Nacional, luego regresa a la parroquia."
+    mapImage: "/maps/mapa-3k.png"
+    mapUrl: "https://www.google.com/maps/d/edit?mid=1gsypjpHprzfQ_D0nq3yCWTAgaYF-0hk&usp=sharing"
     popular: false
-    ctaText: "Elegir 3K"
     features:
       - text: "Playera conmemorativa"
         highlight: false
@@ -55,14 +62,14 @@ distancias:
         highlight: false
 
   - id: "5k"
-    name: "Ruta Completa"
+    name: "Ruta 5K"
     subtitle: "Carrera"
     distance: "5K"
-    price: 180
-    currency: "MXN"
     description: "El recorrido completo para quienes buscan el reto. Ruta plana con estaciones de hidratación cada kilómetro."
+    routeDescription: "Inicia el recorrido en la parroquia hasta el OXXO de la Ejército Nacional y Paseo de la Victoria, luego regresa a la parroquia."
+    mapImage: "/maps/mapa-5k.png"
+    mapUrl: "https://www.google.com/maps/d/edit?mid=14h5_nKzZNU--VnbOsqV6rOVA40O-gr4&usp=sharing"
     popular: true
-    ctaText: "Elegir 5K"
     features:
       - text: "Playera conmemorativa"
         highlight: false
@@ -74,16 +81,16 @@ distancias:
         highlight: true
       - text: "Premiación 1°, 2° y 3° lugar"
         highlight: true
-  
+
   - id: "10k"
-    name: "Ruta Extendida"
+    name: "Ruta 10K"
     subtitle: "Carrera"
     distance: "10K"
-    price: 180
-    currency: "MXN"
-    description: "El recorrido completo para quienes buscan el reto. Ruta plana con estaciones de hidratación cada kilómetro."
+    description: "El recorrido más largo para los corredores más experimentados. Ruta plana con estaciones de hidratación cada kilómetro."
+    routeDescription: "Inicia el recorrido en la parroquia hasta el DistMar de la Francisco Villareal Torres, luego regresa a la parroquia."
+    mapImage: "/maps/mapa-10k.png"
+    mapUrl: "https://www.google.com/maps/d/edit?mid=1GG52emTG7Ngb4hV15J6Hcg97GIuN3Zo&usp=sharing"
     popular: false
-    ctaText: "Elegir 10K"
     features:
       - text: "Playera conmemorativa"
         highlight: false

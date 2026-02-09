@@ -36,8 +36,7 @@ export default function Hero({ event, distancias, raceOver }: HeroProps) {
             </h1>
 
             <p className="text-mute text-base leading-relaxed max-w-sm mb-12 anim d2">
-              Corre, camina o acompaña. Cada paso construye un futuro mejor para
-              nuestra comunidad.
+              {event.invitation}
             </p>
 
             <div className="flex flex-wrap gap-10 mb-12 anim d3">

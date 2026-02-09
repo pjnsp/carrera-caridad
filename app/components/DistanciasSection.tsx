@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Distancia } from "../../config/types";
 
 function CheckIcon() {
@@ -24,6 +25,24 @@ function StarIcon() {
   );
 }
 
+function MapIcon() {
+  return (
+    <svg
+      className="w-5 h-5 text-faint"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"
+      />
+    </svg>
+  );
+}
+
 interface DistanciasSectionProps {
   distancias: Distancia[];
 }
@@ -43,13 +62,13 @@ export default function DistanciasSection({ distancias }: DistanciasSectionProps
           </div>
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
             <p className="text-mute leading-relaxed">
-              Ambas rutas parten de la explanada, son planas y aptas para todas
+              Todas las rutas parten de la explanada, son planas y aptas para todas
               las edades. Elige la que va contigo.
             </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="flex flex-col gap-8 max-w-5xl mx-auto">
           {distancias.map((distancia) => (
             <div
               key={distancia.id}
@@ -57,6 +76,7 @@ export default function DistanciasSection({ distancias }: DistanciasSectionProps
                 distancia.popular ? "ring-2 ring-lime" : ""
               }`}
             >
+              {/* Card header */}
               <div className="bg-ink p-8 relative overflow-hidden">
                 {distancia.popular && (
                   <div className="absolute top-0 right-0 bg-lime text-ink px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest">
@@ -81,40 +101,82 @@ export default function DistanciasSection({ distancias }: DistanciasSectionProps
                   </h3>
                 </div>
               </div>
-              <div className="p-8">
-                <p className="text-mute text-sm leading-relaxed mb-8">
-                  {distancia.description}
-                </p>
-                <div className="space-y-3 mb-8">
-                  {distancia.features.map((feature, i) => (
-                    <div
-                      key={i}
-                      className={`flex items-center gap-3 text-sm ${
-                        feature.highlight
-                          ? "text-ink font-semibold"
-                          : "text-ink/60"
+
+              {/* Card body: two-column on desktop, stacked on mobile */}
+              <div className="grid md:grid-cols-2">
+                {/* Left: description + features + CTA */}
+                <div className="p-8">
+                  <p className="text-mute text-sm leading-relaxed mb-8">
+                    {distancia.description}
+                  </p>
+                  <div className="space-y-3 mb-8">
+                    {distancia.features.map((feature, i) => (
+                      <div
+                        key={i}
+                        className={`flex items-center gap-3 text-sm ${
+                          feature.highlight
+                            ? "text-ink font-semibold"
+                            : "text-ink/60"
+                        }`}
+                      >
+                        {feature.highlight ? <StarIcon /> : <CheckIcon />}
+                        {feature.text}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="border-t border-soft pt-6">
+                    <a
+                      href="#inscripcion"
+                      className={`inline-block px-6 py-3 text-xs font-bold uppercase tracking-wider transition-colors ${
+                        distancia.popular
+                          ? "bg-lime text-ink hover:bg-ink hover:text-lime"
+                          : "bg-ink text-white hover:bg-lime hover:text-ink"
                       }`}
                     >
-                      {feature.highlight ? <StarIcon /> : <CheckIcon />}
-                      {feature.text}
-                    </div>
-                  ))}
+                      Inscríbete
+                    </a>
+                  </div>
                 </div>
-                <div className="border-t border-soft pt-6 flex items-end justify-between">
-                  <p className="font-impact text-4xl text-ink uppercase">
-                    ${distancia.price}{" "}
-                    <span className="text-lg text-faint">{distancia.currency}</span>
-                  </p>
-                  <a
-                    href="#inscripcion"
-                    className={`px-6 py-3 text-xs font-bold uppercase tracking-wider transition-colors ${
-                      distancia.popular
-                        ? "bg-lime text-ink hover:bg-ink hover:text-lime"
-                        : "bg-ink text-white hover:bg-lime hover:text-ink"
-                    }`}
-                  >
-                    {distancia.ctaText}
-                  </a>
+
+                {/* Right: map image + route description */}
+                <div className="p-8 md:border-l border-t md:border-t-0 border-soft flex flex-col">
+                  {distancia.mapUrl ? (
+                    <a
+                      href={distancia.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative w-full aspect-[3/2] bg-paper mb-4 overflow-hidden block group/map"
+                    >
+                      <Image
+                        src={distancia.mapImage}
+                        alt={`Mapa de ruta ${distancia.distance}`}
+                        fill
+                        className="object-cover transition-transform group-hover/map:scale-105"
+                      />
+                      <span className="absolute inset-0 bg-ink/0 group-hover/map:bg-ink/10 transition-colors flex items-center justify-center">
+                        <span className="opacity-0 group-hover/map:opacity-100 transition-opacity bg-ink/70 text-white text-xs font-bold uppercase tracking-wider px-4 py-2">
+                          Ver mapa completo
+                        </span>
+                      </span>
+                    </a>
+                  ) : (
+                    <div className="relative w-full aspect-[3/2] bg-paper mb-4 overflow-hidden">
+                      <Image
+                        src={distancia.mapImage}
+                        alt={`Mapa de ruta ${distancia.distance}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="flex items-start gap-3">
+                    <div className="shrink-0 mt-0.5">
+                      <MapIcon />
+                    </div>
+                    <p className="text-faint text-sm leading-relaxed">
+                      {distancia.routeDescription}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

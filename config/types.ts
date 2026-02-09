@@ -7,6 +7,7 @@ export interface EventConfig {
   name: string;
   titleLines: TitleLine[];
   tagline: string;
+  invitation: string;
   date: string;
   time: string;
   displayDate: string;
@@ -14,6 +15,12 @@ export interface EventConfig {
   fullDate: string;
   maxCapacity: number;
   registrationDeadline: string;
+}
+
+export interface RegistrationConfig {
+  price: number;
+  currency: string;
+  donationItem: string;
 }
 
 export interface LocationConfig {
@@ -32,11 +39,11 @@ export interface Distancia {
   name: string;
   subtitle: string;
   distance: string;
-  price: number;
-  currency: string;
   description: string;
+  routeDescription: string;
+  mapImage: string;
+  mapUrl?: string;
   popular: boolean;
-  ctaText: string;
   features: DistanciaFeature[];
 }
 
@@ -64,6 +71,7 @@ export interface RaceConfig {
   raceOver: boolean;
   raceOverMessage: string;
   registrationFormUrl: string;
+  registration: RegistrationConfig;
   location: LocationConfig;
   distancias: Distancia[];
   schedule: ScheduleItem[];
