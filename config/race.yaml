@@ -1,16 +1,16 @@
 # ─────────────────────────────────────────────
-# Carrera por la Esperanza — Configuration
+# Carrera por la Cardidad — Configuration
 # ─────────────────────────────────────────────
 
 # Event metadata
 event:
-  name: "Carrera por la Esperanza"
+  name: "Carrera por la Caridad"
   titleLines:
     - text: "Carrera"
       faded: false
     - text: "Por La"
       faded: true
-    - text: "Esperanza"
+    - text: "Caridad"
       faded: false
   tagline: "Carrera Benéfica 2026"
   invitation: "Corre, trota o camina. Perfecto para todas las edades. ¡Trae a tu mascota!"
@@ -24,7 +24,7 @@ event:
 
 # Toggle to show "race is over" banner and hide registration form
 raceOver: false
-raceOverMessage: "¡Gracias por participar en la Carrera por la Esperanza 2026! Nos vemos el próximo año."
+raceOverMessage: "¡Gracias por participar en la Carrera por la Caridad 2026! Nos vemos el próximo año."
 
 # Google Forms embed URL for registration
 registrationFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeBHatDcmNbWfLyBziED359xIvDBWNBvGcbMUIjnUQg12oI4w/viewform?embedded=true"

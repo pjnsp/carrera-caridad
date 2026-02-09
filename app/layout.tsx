@@ -14,9 +14,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Carrera por la Esperanza — Pastoral Juvenil NSP",
+  title: "Carrera por la Caridad — Pastoral Juvenil NSP",
   description:
-    "Carrera benéfica organizada por la Pastoral Juvenil de Nuestra Señora de la Paz. Corre, camina o acompaña. Cada paso construye un futuro mejor.",
+    "Carrera benéfica organizada por la Pastoral Juvenil de Nuestra Señora de la Paz. Corre, camina o trota. ¡Trae a tu mascota!",
 };
 
 export default function RootLayout({
