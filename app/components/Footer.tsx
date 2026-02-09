@@ -163,11 +163,11 @@ export default function Footer({
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/15 text-xs">
+          <p className="text-white/30 text-xs">
             © {new Date().getFullYear()} Pastoral Juvenil NSP
           </p>
-          <p className="text-white/10 text-xs">
-            Hecho con amor para nuestra comunidad
+          <p className="text-white/30 text-xs">
+            Hecho con amor por <a href="https://diogneto-labs.pjnsp.com" target="_blank" rel="noopener noreferrer" className="hover:text-lime text-white/50 transition-colors underline underline-offset-4 decoration-lime">Diogneto Labs</a> para nuestra comunidad
           </p>
         </div>
       </div>
