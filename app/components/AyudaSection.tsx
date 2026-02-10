@@ -156,7 +156,7 @@ export default function AyudaSection({
                 href={sn.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-white border-2 border-soft px-8 py-4 hover-up group hover:border-lime transition-colors"
+                className="w-64 flex items-center justify-center gap-3 bg-white border-2 border-soft px-8 py-4 hover-up group hover:border-lime transition-colors"
               >
                 <span className="text-ink group-hover:text-lime transition-colors">
                   <SocialIcon platform={sn.platform} />

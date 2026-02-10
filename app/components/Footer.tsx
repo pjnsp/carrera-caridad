@@ -167,7 +167,7 @@ export default function Footer({
             © {new Date().getFullYear()} Pastoral Juvenil NSP
           </p>
           <p className="text-white/30 text-xs">
-            Hecho con amor por <a href="https://diogneto-labs.pjnsp.com" target="_blank" rel="noopener noreferrer" className="hover:text-lime text-white/50 transition-colors underline underline-offset-4 decoration-lime">Diogneto Labs</a> para nuestra comunidad
+            Hecho con amor por <a href="https://diogneto-labs.pjnsp.com" target="_blank" rel="noopener noreferrer" className="hover:text-lime text-white/50 transition-colors underline underline-offset-4 decoration-lime">Diogneto</a> para nuestra comunidad
           </p>
         </div>
       </div>

@@ -102,7 +102,7 @@ export default function Hero({ event, distancias, raceOver }: HeroProps) {
           className="hero-photo relative hidden lg:block"
           style={
             {
-              "--hero-img": "url('/pj-cover.png')",
+              "--hero-img": "url('/many-racers.jpg')",
               backgroundImage: "var(--hero-img)",
             } as React.CSSProperties
           }
