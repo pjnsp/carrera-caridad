@@ -8,8 +8,18 @@
   --color-soft: #E8E8E8;
   --color-paper: #F5F5F3;
 
+  /* Alternate theme palette */
+  --color-cream: #F0EBE1;
+  --color-slate: #3D5A73;
+  --color-sky: #9ECAD9;
+  --color-yellow: #F5C94C;
+  --color-coral: #F0978F;
+  --color-sage: #7FB99A;
+  --color-forest: #3A6B4A;
+
   --font-impact: "Anton", Impact, sans-serif;
   --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Fredoka", "Nunito", sans-serif;
 }
 
 /* Hero photo — grayscale overlay */
@@ -53,3 +63,43 @@
   transform: translateY(-3px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.08);
 }
+
+/* ═══════════════════════════════════════════════
+   Alternate theme utilities
+   ═══════════════════════════════════════════════ */
+
+/* Noise texture for colored blocks */
+.textured::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Floating food item animations */
+@keyframes float-slow { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
+@keyframes float-med  { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-8px) rotate(-4deg); } }
+@keyframes float-fast { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(5deg); } }
+.float-slow { animation: float-slow 5s ease-in-out infinite; }
+.float-med  { animation: float-med 4s ease-in-out infinite 0.5s; }
+.float-fast { animation: float-fast 6s ease-in-out infinite 1s; }
+
+/* Pop-in entrance */
+@keyframes pop-in { from { opacity: 0; transform: scale(0.9) translateY(16px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+.pop { animation: pop-in 0.5s ease-out both; }
+.d5 { animation-delay: 0.65s; }
+
+/* Green dashed border frame */
+.green-frame {
+  border: 3px solid #3A6B4A;
+  border-radius: 1.25rem;
+}
+
+/* Hover bounce */
+.hover-bounce { transition: transform 0.3s ease; }
+.hover-bounce:hover { transform: translateY(-4px) rotate(-1deg); }
