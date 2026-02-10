@@ -20,7 +20,12 @@ export interface EventConfig {
 export interface RegistrationConfig {
   price: number;
   currency: string;
-  donationItem: string;
+  playeraImage: string;
+  playeraImageAlt: string;
+  medallaImage: string;
+  medallaImageAlt: string;
+  despensaTitle: string;
+  despensaItems: string[];
 }
 
 export interface LocationConfig {

@@ -31,7 +31,7 @@ export default function Home() {
         <RegistrationBanner registration={config.registration} />
       )}
 
-      <MisionSection />
+      <MisionSection registration={config.registration} />
       <EventoSection
         schedule={config.schedule}
         location={config.location}

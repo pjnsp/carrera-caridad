@@ -1,4 +1,7 @@
+"use client";
+
 import type { RegistrationConfig } from "../../config/types";
+import DespensaModal from "./DespensaModal";
 
 interface RegistrationBannerProps {
   registration: RegistrationConfig;
@@ -12,9 +15,20 @@ export default function RegistrationBanner({ registration }: RegistrationBannerP
           Inscripción: ${registration.price} {registration.currency}
         </p>
         <span className="hidden sm:block w-px h-8 bg-ink/20"></span>
-        <p className="font-impact text-xl md:text-2xl uppercase opacity-80">
-          + {registration.donationItem}
-        </p>
+        <DespensaModal
+          title={registration.despensaTitle}
+          items={registration.despensaItems}
+        >
+          {(openModal) => (
+            <button
+              type="button"
+              onClick={openModal}
+              className="font-impact text-xl md:text-2xl uppercase opacity-80 hover:opacity-100 hover:underline hover:decoration-2 hover:underline-offset-4 transition-all cursor-pointer"
+            >
+              + traer despensa
+            </button>
+          )}
+        </DespensaModal>
       </div>
     </div>
   );

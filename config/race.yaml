@@ -33,7 +33,27 @@ registrationFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeBHatDcmNbWfLyBz
 registration:
   price: 300
   currency: "MXN"
-  donationItem: "traer una despensa"
+  # Modal content for the "Playera" card
+  playeraImage: "/playera-2026.jpg"
+  playeraImageAlt: "Playera conmemorativa edición 2026"
+  # Modal content for the "Medalla" card
+  medallaImage: "/medal.jpeg"
+  medallaImageAlt: "Medalla de participación"
+  # Modal content for the "100% Benéfico" card and the "despensa" link
+  despensaTitle: "¿Qué puedo traer de despensa?"
+  despensaItems:
+    - "Arroz (1 kg)"
+    - "Frijol (1 kg)"
+    - "Aceite (1 L)"
+    - "Azúcar (1 kg)"
+    - "Harina de maíz (1 kg)"
+    - "Lata de atún"
+    - "Pasta para sopa"
+    - "Leche en polvo o larga vida"
+    - "Avena"
+    - "Sal"
+    - "Jabón de baño o lavaplatos"
+    - "Papel higiénico"
 
 # Main location
 location:
