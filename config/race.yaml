@@ -19,7 +19,7 @@ event:
   displayDate: "17 mayo"
   displayTime: "7:00 AM"
   fullDate: "Domingo 17 de mayo, 2026"
-  maxCapacity: 200
+  maxCapacity: 300
   registrationDeadline: "16 de mayo"
 
 # Toggle to show "race is over" banner and hide registration form
@@ -42,16 +42,16 @@ registration:
   # Modal content for the "100% Benéfico" card and the "despensa" link
   despensaTitle: "¿Qué puedo traer de despensa?"
   despensaItems:
-    - "Arroz (1 kg)"
-    - "Frijol (1 kg)"
-    - "Aceite (1 L)"
-    - "Azúcar (1 kg)"
-    - "Harina de maíz (1 kg)"
-    - "Lata de atún"
-    - "Pasta para sopa"
-    - "Leche en polvo o larga vida"
+    - "Arroz"
+    - "Frijol"
+    - "Aceite"
+    - "Azúcar"
+    - "Harina"
+    - "Latas de atún"
+    - "Sopas"
+    - "Leche en polvo o tetrapac"
     - "Avena"
-    - "Sal"
+    - "Salsa de tomate"
     - "Jabón de baño o lavaplatos"
     - "Papel higiénico"
 
@@ -74,7 +74,7 @@ distancias:
     features:
       - text: "Playera conmemorativa"
         highlight: false
-      - text: "Medalla de participación"
+      - text: "Medalla de participación (para los primeros 300 participantes registrados)"
         highlight: false
       - text: "Hidratación y fruta"
         highlight: false
@@ -93,14 +93,10 @@ distancias:
     features:
       - text: "Playera conmemorativa"
         highlight: false
-      - text: "Medalla de participación"
+      - text: "Medalla de participación (para los primeros 300 participantes registrados)"
         highlight: false
       - text: "Hidratación y fruta"
         highlight: false
-      - text: "Chip de cronometraje"
-        highlight: true
-      - text: "Premiación 1°, 2° y 3° lugar"
-        highlight: true
 
   - id: "10k"
     name: "Ruta 10K"
@@ -114,32 +110,37 @@ distancias:
     features:
       - text: "Playera conmemorativa"
         highlight: false
-      - text: "Medalla de participación"
+      - text: "Medalla de participación (para los primeros 300 participantes registrados)"
         highlight: false
       - text: "Hidratación y fruta"
         highlight: false
-      - text: "Chip de cronometraje"
+      - text: "Premio en efectivo al 1°, 2° y 3° lugar"
         highlight: true
-      - text: "Premiación 1°, 2° y 3° lugar"
-        highlight: true
+
+# Pre-event schedule (kit pick-up)
+preSchedule:
+  tagline: "Recoge tu kit de corredor (playera y número) antes del evento."
+  items:
+    - date: "Sábado 9 de mayo"
+      time: "5:00 PM - 8:00 PM"
+      description: "Entrega de kits en los salones de la parroquia"
+    - date: "Viernes 15 de mayo"
+      time: "9:00 AM - 12:00 PM"
+      description: "Entrega de kits en los salones de la parroquia"
 
 # Schedule / timeline (ordered array)
 schedule:
-  - time: "6:00"
-    title: "Registro y Entrega de Kits"
-    description: "Recoge tu playera, número de corredor y chip de cronometraje en la explanada de la parroquia."
-    highlight: false
   - time: "6:45"
     title: "Calentamiento Grupal"
     description: "Sesión de estiramiento y calentamiento guiado para preparar el cuerpo."
     highlight: false
   - time: "7:00"
     title: "¡Arrancamos!"
-    description: "Salida simultánea de las rutas 3K y 5K desde la explanada de la parroquia."
+    description: "Salida simultánea de las rutas 3K, 5K y 10K desde la parroquia."
     highlight: true
   - time: "9:00"
-    title: "Premiación y Rifa"
-    description: "Entrega de trofeos al 1°, 2° y 3° lugar del 5K. Rifa de premios para todos los participantes."
+    title: "Premiación"
+    description: "Entrega de premio en efectivo al 1°, 2° y 3° lugar del 10K."
     highlight: false
 
 # Contacts (array — only available fields are displayed)

@@ -33,6 +33,7 @@ export default function Home() {
 
       <MisionSection registration={config.registration} />
       <EventoSection
+        preSchedule={config.preSchedule}
         schedule={config.schedule}
         location={config.location}
       />

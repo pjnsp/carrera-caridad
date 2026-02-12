@@ -68,10 +68,10 @@ export default function MisionCards({ registration }: MisionCardsProps) {
             </svg>
           </div>
           <p className="font-impact text-lg uppercase text-ink mb-2">
-            Medalla para todos
+            Medalla de participación
           </p>
           <p className="text-faint text-sm leading-relaxed">
-            Cruzar la meta ya es un triunfo. Todos reciben medalla.
+            Cruzar la meta ya es un triunfo. Los primeros 300 participantes registrados reciben una medalla de participación.
           </p>
         </button>
 

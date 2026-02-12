@@ -90,7 +90,7 @@ export default function Hero({ event, distancias, raceOver }: HeroProps) {
                   </svg>
                 </a>
                 <span className="text-xs text-faint font-medium">
-                  Cupo limitado — {event.maxCapacity} personas
+                  Cupo limitado — {event.maxCapacity} personas <br /> (para alcanzar medalla de participación)
                 </span>
               </div>
             )}

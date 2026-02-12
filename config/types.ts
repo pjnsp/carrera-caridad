@@ -52,6 +52,17 @@ export interface Distancia {
   features: DistanciaFeature[];
 }
 
+export interface PreScheduleItem {
+  date: string;
+  time: string;
+  description: string;
+}
+
+export interface PreScheduleConfig {
+  tagline: string;
+  items: PreScheduleItem[];
+}
+
 export interface ScheduleItem {
   time: string;
   title: string;
@@ -79,6 +90,7 @@ export interface RaceConfig {
   registration: RegistrationConfig;
   location: LocationConfig;
   distancias: Distancia[];
+  preSchedule: PreScheduleConfig;
   schedule: ScheduleItem[];
   contacts: Contact[];
   socialNetworks: SocialNetwork[];
