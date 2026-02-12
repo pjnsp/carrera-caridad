@@ -89,8 +89,7 @@ export default function Footer({
               </span>
             </div>
             <p className="text-white/30 text-sm leading-relaxed">
-              Parroquia {location.name.replace("Explanada de la Parroquia ", "")}.
-              Construyendo comunidad a través del servicio.
+              {location.name}
             </p>
           </div>
           <div className="md:col-span-3 md:col-start-6">
@@ -99,7 +98,7 @@ export default function Footer({
             </p>
             <p className="text-white/20 text-sm">{event.fullDate}</p>
             <p className="text-white/20 text-sm">
-              {event.displayTime} — {location.name.split(" de la Parroquia ").pop()}
+              {event.displayTime} — {location.name}
             </p>
           </div>
           <div className="md:col-span-3">
