@@ -54,7 +54,7 @@ export default function EventoSection({
           </div>
           <div className="lg:col-span-5">
             <h2 className="font-impact text-4xl md:text-5xl uppercase text-ink leading-[0.95]">
-              <span className="text-lime">Cronograma</span>
+              El <span className="text-lime">Cronograma</span>
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
