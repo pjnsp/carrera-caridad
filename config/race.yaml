@@ -140,7 +140,7 @@ schedule:
     highlight: true
   - time: "9:00"
     title: "Premiación"
-    description: "Entrega de premio en efectivo al 1°, 2° y 3° lugar del 10K."
+    description: "Entrega de premio en efectivo al 1°, 2° y 3° lugar del 10K en categoría masculina y femenina."
     highlight: false
 
 # Contacts (array — only available fields are displayed)
