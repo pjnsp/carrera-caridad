@@ -130,7 +130,7 @@ export default function MisionCards({ registration }: MisionCardsProps) {
                 100% Benéfico
               </p>
               <p className="text-faint text-sm leading-relaxed mb-4">
-                Todo lo recaudado va directo a familias de la comunidad.
+                Todo lo recaudado será para beneficio de las más de 22 instituciones que apoya la parroquia.
               </p>
               <span className="inline-block bg-lime text-ink font-bold text-xs uppercase px-4 py-2 tracking-wide group-hover:bg-ink group-hover:text-lime transition-colors">
                 ¿Qué puedo donar?

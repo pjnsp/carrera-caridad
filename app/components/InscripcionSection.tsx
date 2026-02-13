@@ -26,7 +26,7 @@ export default function InscripcionSection({
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
             <p className="text-mute leading-relaxed">
               Inscríbete antes del{" "}
-              <strong className="text-ink">{registrationDeadline}</strong>. Puedes pre-registrarte en el siguiente formulario o en la oficina parroquial. Pasa a la oficina para dejar tu aportación.
+              <strong className="text-ink">{registrationDeadline}</strong>. Haz tu pre-registro en el siguiente formulario y pasa a la oficina parroquial para dejar tu aportación.
             </p>
           </div>
         </div>

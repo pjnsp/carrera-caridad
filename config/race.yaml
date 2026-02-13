@@ -122,11 +122,11 @@ preSchedule:
   tagline: "Recoge tu kit de corredor (playera y número) antes del evento."
   items:
     - date: "Sábado 9 de mayo"
-      time: "5:00 PM - 8:00 PM"
-      description: "Entrega de kits en los salones de la parroquia"
-    - date: "Viernes 15 de mayo"
       time: "9:00 AM - 12:00 PM"
-      description: "Entrega de kits en los salones de la parroquia"
+      description: "Entrega de kits en la oficina de la parroquia"
+    - date: "Viernes 15 de mayo"
+      time: "5:00 PM - 8:00 PM"
+      description: "Entrega de kits en la oficina de la parroquia"
 
 # Schedule / timeline (ordered array)
 schedule:
