@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
+import { env } from "@/config/env";
 import "./globals.css";
 
 const anton = Anton({
@@ -33,21 +34,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isProduction = env.ENVIRONMENT === "production";
+
   return (
     <html lang="es" className="scroll-smooth">
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-3XHXMB8T6J"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-3XHXMB8T6J');
-          `}
-        </Script>
+        {isProduction && (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-3XHXMB8T6J"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-3XHXMB8T6J');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body
         className={`${anton.variable} ${plusJakarta.variable} font-body text-ink antialiased overflow-x-hidden`}
