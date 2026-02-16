@@ -75,7 +75,7 @@ export default function Footer({
     <footer className="bg-ink py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-12 gap-10 mb-16">
-          <div className="md:col-span-4">
+          <div className="md:col-span-3">
             <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/pj.png"
@@ -92,7 +92,7 @@ export default function Footer({
               {location.name}
             </p>
           </div>
-          <div className="md:col-span-3 md:col-start-6">
+          <div className="md:col-span-3">
             <p className="font-impact text-white/30 text-xs uppercase tracking-widest mb-4">
               Evento
             </p>
@@ -153,6 +153,33 @@ export default function Footer({
                 ))}
               </div>
             )}
+          </div>
+          <div className="md:col-span-3">
+            <p className="font-impact text-white/30 text-xs uppercase tracking-widest mb-4">
+              Enlaces
+            </p>
+            <div className="space-y-2">
+              <p className="text-white/20 text-sm">
+                <a
+                  href="https://www.pjnsp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-lime transition-colors"
+                >
+                  Pastoral Juvenil
+                </a>
+              </p>
+              <p className="text-white/20 text-sm">
+                <a
+                  href="https://www.parroquiansp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-lime transition-colors"
+                >
+                  Parroquia Nuestra Señora de la Paz
+                </a>
+              </p>
+            </div>
           </div>
         </div>
 

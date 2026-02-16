@@ -21,7 +21,7 @@ export default function MisionSection({ registration }: MisionSectionProps) {
           </div>
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
             <p className="text-mute leading-relaxed">
-              La Pastoral Juvenil de Nuestra Señora de la Paz organiza su primera
+              La <a href="https://www.pjnsp.com" target="_blank" className="text-lime">Pastoral Juvenil de Nuestra Señora de la Paz</a> organiza su primera
               carrera benéfica anual. El 100% de lo recaudado apoya a familias
               vulnerables de nuestra comunidad.
             </p>
