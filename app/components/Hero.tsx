@@ -1,4 +1,5 @@
 import type { EventConfig, Distancia } from "../../config/types";
+import { ScrollCircle } from "./ScrollCircle";
 
 interface HeroProps {
   event: EventConfig;
@@ -10,8 +11,13 @@ export default function Hero({ event, distancias, raceOver }: HeroProps) {
   const distanceSummary = distancias.map((d) => d.distance).join(" / ");
 
   return (
-    <section className="pt-14">
-      <div className="grid lg:grid-cols-2 min-h-[calc(100vh-3.5rem)]">
+    <section className="pt-14 overflow-visible relative">
+      {/* Mobile scroll circle — top-right, hidden on lg+ */}
+      <div className="absolute -top-10 -right-10 z-10 lg:hidden">
+        <ScrollCircle size={280} thickness={3} logoSrc="/nsp-logo-black.png" />
+      </div>
+
+      <div className="grid lg:grid-cols-2 min-h-[calc(100vh-3.5rem)] overflow-visible">
         {/* Left */}
         <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-20 py-20">
           <div className="max-w-lg">
@@ -97,16 +103,22 @@ export default function Hero({ event, distancias, raceOver }: HeroProps) {
           </div>
         </div>
 
-        {/* Right: grayscale hero image */}
-        <div
-          className="hero-photo relative hidden lg:block"
-          style={
-            {
-              "--hero-img": "url('/many-racers.jpg')",
-              backgroundImage: "var(--hero-img)",
-            } as React.CSSProperties
-          }
-        ></div>
+        {/* Right: grayscale hero image + scroll circle */}
+        <div className="relative hidden lg:block overflow-visible">
+          <div
+            className="hero-photo absolute inset-0"
+            style={
+              {
+                "--hero-img": "url('/many-racers.jpg')",
+                backgroundImage: "var(--hero-img)",
+              } as React.CSSProperties
+            }
+          />
+          {/* Scroll-spinning circle — outside hero-photo to avoid grayscale */}
+          <div className="absolute -bottom-32 -right-20 z-10">
+            <ScrollCircle size={480} thickness={3} />
+          </div>
+        </div>
       </div>
     </section>
   );

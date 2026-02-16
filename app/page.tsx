@@ -22,7 +22,7 @@ export default function Home() {
       />
 
       {config.raceOver ? (
-        <div className="bg-lime text-ink py-6 px-6 text-center">
+        <div className="bg-lime text-ink py-6 px-6 text-center relative z-20">
           <p className="font-impact text-2xl md:text-3xl uppercase">
             {config.raceOverMessage}
           </p>
