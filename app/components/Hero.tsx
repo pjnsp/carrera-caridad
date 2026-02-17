@@ -11,10 +11,10 @@ export default function Hero({ event, distancias, raceOver }: HeroProps) {
   const distanceSummary = distancias.map((d) => d.distance).join(" / ");
 
   return (
-    <section className="pt-14 overflow-visible relative">
+    <section className="pt-14 overflow-x-clip overflow-y-visible relative">
       {/* Mobile scroll circle — top-right, hidden on lg+ */}
       <div className="absolute -top-10 -right-10 z-10 lg:hidden">
-        <ScrollCircle size={280} thickness={3} logoSrc="/nsp-logo-black.png" />
+        <ScrollCircle size={280} thickness={3} logoSrc="/nsp-logo-black.png" logoOpacity={0.25} />
       </div>
 
       <div className="grid lg:grid-cols-2 min-h-[calc(100vh-3.5rem)] overflow-visible">

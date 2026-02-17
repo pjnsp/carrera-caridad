@@ -25,10 +25,12 @@ export function ScrollCircle({
   size = 480,
   thickness = 3,
   logoSrc = "/nsp-logo-white.png",
+  logoOpacity = 0.7,
 }: {
   size?: number;
   thickness?: number;
   logoSrc?: string;
+  logoOpacity?: number;
 }) {
   const ringRef = useRef<HTMLDivElement>(null);
 
@@ -78,7 +80,8 @@ export function ScrollCircle({
           alt="Nuestra Señora de la Paz"
           width={logoSize}
           height={logoSize}
-          className="opacity-70 select-none pointer-events-none"
+          className="select-none pointer-events-none"
+          style={{ opacity: logoOpacity }}
           draggable={false}
         />
       </div>
