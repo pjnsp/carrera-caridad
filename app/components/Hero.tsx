@@ -22,7 +22,7 @@ export default function Hero({ event, distancias, raceOver }: HeroProps) {
         <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-20 py-20">
           <div className="max-w-lg">
             <div className="anim flex items-center gap-3 mb-10">
-              <div className="w-8 h-[3px] bg-lime"></div>
+              <div className="w-8 h-[3px] bg-accent"></div>
               <span className="text-faint font-semibold text-[11px] uppercase tracking-[0.25em]">
                 {event.tagline}
               </span>
@@ -78,7 +78,7 @@ export default function Hero({ event, distancias, raceOver }: HeroProps) {
               <div className="flex flex-wrap items-center gap-5 anim d4">
                 <a
                   href="#inscripcion"
-                  className="bg-lime text-ink px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-ink hover:text-lime transition-colors flex items-center gap-3 group"
+                  className="bg-accent text-ink px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-ink hover:text-accent transition-colors flex items-center gap-3 group"
                 >
                   Inscríbete Ahora
                   <svg

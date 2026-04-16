@@ -19,7 +19,7 @@ function CheckIcon() {
 
 function StarIcon() {
   return (
-    <svg className="w-4 h-4 text-lime" viewBox="0 0 20 20" fill="currentColor">
+    <svg className="w-4 h-4 text-accent" viewBox="0 0 20 20" fill="currentColor">
       <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" />
     </svg>
   );
@@ -57,7 +57,7 @@ export default function DistanciasSection({ distancias }: DistanciasSectionProps
           </div>
           <div className="lg:col-span-5">
             <h2 className="font-impact text-4xl md:text-5xl uppercase text-ink leading-[0.95]">
-              Elige tu <span className="text-lime">distancia</span>
+              Elige tu <span className="text-accent">distancia</span>
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
@@ -73,13 +73,13 @@ export default function DistanciasSection({ distancias }: DistanciasSectionProps
             <div
               key={distancia.id}
               className={`bg-white hover-up group ${
-                distancia.popular ? "ring-2 ring-lime" : ""
+                distancia.popular ? "ring-2 ring-accent" : ""
               }`}
             >
               {/* Card header */}
               <div className="bg-ink p-8 relative overflow-hidden">
                 {distancia.popular && (
-                  <div className="absolute top-0 right-0 bg-lime text-ink px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest">
+                  <div className="absolute top-0 right-0 bg-accent text-ink px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest">
                     Más Popular
                   </div>
                 )}
@@ -90,7 +90,7 @@ export default function DistanciasSection({ distancias }: DistanciasSectionProps
                   <span
                     className={`inline-block px-3 py-1 border text-[10px] font-bold uppercase tracking-widest mb-4 ${
                       distancia.popular
-                        ? "border-lime/40 text-lime"
+                        ? "border-accent/40 text-accent"
                         : "border-white/20 text-white"
                     }`}
                   >
@@ -129,8 +129,8 @@ export default function DistanciasSection({ distancias }: DistanciasSectionProps
                       href="#inscripcion"
                       className={`inline-block px-6 py-3 text-xs font-bold uppercase tracking-wider transition-colors ${
                         distancia.popular
-                          ? "bg-lime text-ink hover:bg-ink hover:text-lime"
-                          : "bg-ink text-white hover:bg-lime hover:text-ink"
+                          ? "bg-accent text-ink hover:bg-ink hover:text-accent"
+                          : "bg-ink text-white hover:bg-accent hover:text-ink"
                       }`}
                     >
                       Inscríbete

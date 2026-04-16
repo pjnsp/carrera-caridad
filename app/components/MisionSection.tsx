@@ -16,12 +16,21 @@ export default function MisionSection({ registration }: MisionSectionProps) {
           <div className="lg:col-span-5">
             <h2 className="font-impact text-4xl md:text-5xl uppercase text-ink leading-[0.95]">
               Más que una carrera, un acto de{" "}
-              <span className="text-lime">amor</span>
+              <span className="text-accent">amor</span>
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
             <p className="text-mute leading-relaxed">
-              La <a href="https://www.pjnsp.com" target="_blank" className="text-lime">Pastoral Juvenil de Nuestra Señora de la Paz</a> organiza su primera
+              La{" "}
+              <a
+                href="https://www.pjnsp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink underline underline-offset-[0.2em] decoration-accent decoration-2 hover:decoration-ink"
+              >
+                Pastoral Juvenil de Nuestra Señora de la Paz
+              </a>{" "}
+              organiza su primera
               carrera benéfica anual. El 100% de lo recaudado apoya a familias
               vulnerables de nuestra comunidad.
             </p>

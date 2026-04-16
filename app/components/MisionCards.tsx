@@ -23,7 +23,7 @@ export default function MisionCards({ registration }: MisionCardsProps) {
           onClick={() => setPlayeraOpen(false)}
           className="bg-white p-8 hover-up group text-left cursor-pointer"
         >
-          <div className="w-11 h-11 border-2 border-soft rounded-lg flex items-center justify-center mb-6 group-hover:border-lime transition-colors">
+          <div className="w-11 h-11 border-2 border-soft rounded-lg flex items-center justify-center mb-6 group-hover:border-accent transition-colors">
             <svg
               className="w-5 h-5 text-ink"
               fill="none"
@@ -52,7 +52,7 @@ export default function MisionCards({ registration }: MisionCardsProps) {
           onClick={() => setMedallaOpen(true)}
           className="bg-white p-8 hover-up group text-left cursor-pointer"
         >
-          <div className="w-11 h-11 border-2 border-soft rounded-lg flex items-center justify-center mb-6 group-hover:border-lime transition-colors">
+          <div className="w-11 h-11 border-2 border-soft rounded-lg flex items-center justify-center mb-6 group-hover:border-accent transition-colors">
             <svg
               className="w-5 h-5 text-ink"
               fill="none"
@@ -77,7 +77,7 @@ export default function MisionCards({ registration }: MisionCardsProps) {
 
         {/* Card: Hidratación (no modal) */}
         <div className="bg-white p-8 hover-up group">
-          <div className="w-11 h-11 border-2 border-soft rounded-lg flex items-center justify-center mb-6 group-hover:border-lime transition-colors">
+          <div className="w-11 h-11 border-2 border-soft rounded-lg flex items-center justify-center mb-6 group-hover:border-accent transition-colors">
             <svg
               className="w-5 h-5 text-ink"
               fill="none"
@@ -111,7 +111,7 @@ export default function MisionCards({ registration }: MisionCardsProps) {
               onClick={openModal}
               className="bg-white p-8 hover-up group text-left cursor-pointer"
             >
-              <div className="w-11 h-11 border-2 border-soft rounded-lg flex items-center justify-center mb-6 group-hover:border-lime transition-colors">
+              <div className="w-11 h-11 border-2 border-soft rounded-lg flex items-center justify-center mb-6 group-hover:border-accent transition-colors">
                 <svg
                   className="w-5 h-5 text-ink"
                   fill="none"
@@ -132,7 +132,7 @@ export default function MisionCards({ registration }: MisionCardsProps) {
               <p className="text-faint text-sm leading-relaxed mb-4">
                 Todo lo recaudado será para beneficio de las más de 22 instituciones que apoya la parroquia.
               </p>
-              <span className="inline-block bg-lime text-ink font-bold text-xs uppercase px-4 py-2 tracking-wide group-hover:bg-ink group-hover:text-lime transition-colors">
+              <span className="inline-block bg-accent text-ink font-bold text-xs uppercase px-4 py-2 tracking-wide group-hover:bg-ink group-hover:text-accent transition-colors">
                 ¿Qué puedo donar?
               </span>
             </button>

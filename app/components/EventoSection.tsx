@@ -14,7 +14,7 @@ function LocationCard({ location }: { location: LocationConfig }) {
   return (
     <div className="mt-10 bg-ink p-6 flex items-start gap-4">
       <svg
-        className="w-5 h-5 text-lime shrink-0 mt-0.5"
+        className="w-5 h-5 text-accent shrink-0 mt-0.5"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth="2"
@@ -54,7 +54,7 @@ export default function EventoSection({
           </div>
           <div className="lg:col-span-5">
             <h2 className="font-impact text-4xl md:text-5xl uppercase text-ink leading-[0.95]">
-              El <span className="text-lime">Cronograma</span>
+              El <span className="text-accent">Cronograma</span>
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
@@ -83,7 +83,7 @@ export default function EventoSection({
                 <p className="font-impact text-xl uppercase text-ink">
                   {item.date}
                 </p>
-                <p className="text-lime font-bold text-sm">{item.time}</p>
+                <p className="text-accent font-bold text-sm">{item.time}</p>
                 <p className="text-faint text-sm leading-relaxed">
                   {item.description}
                 </p>
@@ -111,7 +111,7 @@ export default function EventoSection({
                     <div
                       className={`w-full py-3 text-center font-impact text-sm uppercase ${
                         item.highlight
-                          ? "bg-lime text-ink"
+                          ? "bg-accent text-ink"
                           : "bg-ink text-white"
                       }`}
                     >

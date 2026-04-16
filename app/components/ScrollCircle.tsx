@@ -4,10 +4,10 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 const BRAND_COLORS = [
-  "#A8C83A", // lime
+  "#89D0F3", // accent
   "#111111", // ink
   "#666666", // mute
-  "#A8C83A", // lime
+  "#89D0F3", // accent
   "#333333", // dark gray
 ];
 

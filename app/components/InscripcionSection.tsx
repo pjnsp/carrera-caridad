@@ -20,7 +20,7 @@ export default function InscripcionSection({
           </div>
           <div className="lg:col-span-5">
             <h2 className="font-impact text-4xl md:text-5xl uppercase text-ink leading-[0.95]">
-              Asegura tu <span className="text-lime">lugar</span>
+              Asegura tu <span className="text-accent">lugar</span>
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
@@ -35,7 +35,7 @@ export default function InscripcionSection({
           {raceOver ? (
             <div className="border-2 border-ink p-8 md:p-12 text-center">
               <svg
-                className="w-12 h-12 text-lime mx-auto mb-6"
+                className="w-12 h-12 text-accent mx-auto mb-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
@@ -55,7 +55,7 @@ export default function InscripcionSection({
           ) : (
             <div className="border-2 border-ink p-8 md:p-12">
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-2 h-2 bg-lime rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
                 <span className="text-[10px] font-bold text-faint uppercase tracking-[0.2em]">
                   Inscripciones abiertas
                 </span>

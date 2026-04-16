@@ -117,7 +117,7 @@ export default function Footer({
                     <p className="text-white/20 text-sm">
                       <a
                         href={`mailto:${contact.email}`}
-                        className="hover:text-lime transition-colors"
+                        className="hover:text-accent transition-colors"
                       >
                         {contact.email}
                       </a>
@@ -127,7 +127,7 @@ export default function Footer({
                     <p className="text-white/20 text-sm">
                       <a
                         href={`tel:${contact.phone}`}
-                        className="hover:text-lime transition-colors"
+                        className="hover:text-accent transition-colors"
                       >
                         {contact.phone}
                       </a>
@@ -146,7 +146,7 @@ export default function Footer({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={sn.label}
-                    className="text-white/20 hover:text-lime transition-colors"
+                    className="text-white/20 hover:text-accent transition-colors"
                   >
                     <SocialIcon platform={sn.platform} />
                   </a>
@@ -164,7 +164,7 @@ export default function Footer({
                   href="https://www.pjnsp.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-lime transition-colors"
+                  className="hover:text-accent transition-colors"
                 >
                   Pastoral Juvenil
                 </a>
@@ -174,7 +174,7 @@ export default function Footer({
                   href="https://www.parroquiansp.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-lime transition-colors"
+                  className="hover:text-accent transition-colors"
                 >
                   Parroquia Nuestra Señora de la Paz
                 </a>
@@ -184,7 +184,7 @@ export default function Footer({
         </div>
 
         <div className="flex items-center gap-4 mb-8">
-          <div className="w-6 h-[2px] bg-lime"></div>
+          <div className="w-6 h-[2px] bg-accent"></div>
           <div className="h-px flex-1 bg-white/10"></div>
         </div>
 
@@ -193,7 +193,7 @@ export default function Footer({
             © {new Date().getFullYear()} Pastoral Juvenil NSP
           </p>
           <p className="text-white/30 text-xs">
-            Hecho con amor por <a href="https://diogneto-labs.pjnsp.com" target="_blank" rel="noopener noreferrer" className="hover:text-lime text-white/50 transition-colors underline underline-offset-4 decoration-lime">Diogneto</a> para nuestra comunidad
+            Hecho con amor por <a href="https://diogneto-labs.pjnsp.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent text-white/50 transition-colors underline underline-offset-4 decoration-accent">Diogneto</a> para nuestra comunidad
           </p>
         </div>
       </div>

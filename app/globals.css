@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lime: #A8C83A;
+  /* `accent` — brand sky (avoid `lime`: Tailwind maps bg-lime → default lime-500 green) */
+  --color-accent: #89d0f3;
   --color-ink: #111111;
   --color-mute: #666666;
   --color-faint: #999999;
@@ -96,7 +97,7 @@
 
 /* Green dashed border frame */
 .green-frame {
-  border: 3px solid #3A6B4A;
+  border: 3px solid #213b7e;
   border-radius: 1.25rem;
 }
 

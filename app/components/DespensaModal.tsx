@@ -28,7 +28,7 @@ export default function DespensaModal({
             {items.map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <svg
-                  className="w-5 h-5 text-lime mt-0.5 shrink-0"
+                  className="w-5 h-5 text-accent mt-0.5 shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2"

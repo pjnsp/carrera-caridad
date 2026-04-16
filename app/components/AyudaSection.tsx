@@ -72,7 +72,7 @@ export default function AyudaSection({
           <div className="lg:col-span-5">
             <h2 className="font-impact text-4xl md:text-5xl uppercase text-ink leading-[0.95]">
               ¿Necesitas{" "}
-              <span className="text-lime">ayuda</span>?
+              <span className="text-accent">ayuda</span>?
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-8 flex items-end">
@@ -91,7 +91,7 @@ export default function AyudaSection({
               className="bg-white border-2 border-soft p-8 hover-up group text-center"
             >
               {/* Person icon */}
-              <div className="w-14 h-14 border-2 border-soft rounded-full flex items-center justify-center mx-auto mb-6 group-hover:border-lime transition-colors">
+              <div className="w-14 h-14 border-2 border-soft rounded-full flex items-center justify-center mx-auto mb-6 group-hover:border-accent transition-colors">
                 <svg
                   className="w-6 h-6 text-ink"
                   fill="none"
@@ -116,7 +116,7 @@ export default function AyudaSection({
               {contact.phone && (
                 <a
                   href={`tel:${contact.phone}`}
-                  className="inline-flex items-center gap-2 text-lg font-semibold text-ink underline underline-offset-4 decoration-lime hover:text-lime transition-colors"
+                  className="inline-flex items-center gap-2 text-lg font-semibold text-ink underline underline-offset-4 decoration-accent hover:text-accent transition-colors"
                 >
                   <svg
                     className="w-5 h-5"
@@ -138,7 +138,7 @@ export default function AyudaSection({
               {contact.email && (
                 <a
                   href={`mailto:${contact.email}`}
-                  className="block mt-2 text-sm text-faint hover:text-lime transition-colors"
+                  className="block mt-2 text-sm text-faint hover:text-accent transition-colors"
                 >
                   {contact.email}
                 </a>
@@ -156,12 +156,12 @@ export default function AyudaSection({
                 href={sn.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-64 flex items-center justify-center gap-3 bg-white border-2 border-soft px-8 py-4 hover-up group hover:border-lime transition-colors"
+                className="w-64 flex items-center justify-center gap-3 bg-white border-2 border-soft px-8 py-4 hover-up group hover:border-accent transition-colors"
               >
-                <span className="text-ink group-hover:text-lime transition-colors">
+                <span className="text-ink group-hover:text-accent transition-colors">
                   <SocialIcon platform={sn.platform} />
                 </span>
-                <span className="font-impact text-lg uppercase text-ink group-hover:text-lime transition-colors">
+                <span className="font-impact text-lg uppercase text-ink group-hover:text-accent transition-colors">
                   {sn.label}
                 </span>
               </a>

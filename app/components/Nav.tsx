@@ -45,7 +45,7 @@ export default function Nav({ raceOver }: NavProps) {
           {!raceOver && (
             <a
               href="#inscripcion"
-              className="bg-lime text-ink px-5 py-2 rounded-md font-bold text-xs uppercase tracking-wider hover:bg-ink hover:text-lime transition-colors"
+              className="bg-accent text-ink px-5 py-2 rounded-md font-bold text-xs uppercase tracking-wider hover:bg-ink hover:text-accent transition-colors"
             >
               Inscríbete
             </a>
