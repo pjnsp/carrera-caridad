@@ -157,8 +157,8 @@ contacts:
 # Social networks (displayed in footer)
 socialNetworks:
   - platform: "instagram"
-    url: "https://www.instagram.com/pj.nsp"
+    url: "https://www.instagram.com/caridad_nsp"
     label: "Instagram"
   - platform: "facebook"
-    url: "https://facebook.com/pastoraljuvenilnsp"
+    url: "https://www.facebook.com/CaridadJuvenil"
     label: "Facebook"
