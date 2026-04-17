@@ -145,7 +145,7 @@ export default function DistanciasSection({ distancias }: DistanciasSectionProps
                       href={distancia.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative w-full aspect-[3/2] bg-paper mb-4 overflow-hidden block group/map"
+                      className="relative w-full aspect-[6/7] bg-paper mb-4 overflow-hidden block group/map"
                     >
                       <Image
                         src={distancia.mapImage}
@@ -160,7 +160,7 @@ export default function DistanciasSection({ distancias }: DistanciasSectionProps
                       </span>
                     </a>
                   ) : (
-                    <div className="relative w-full aspect-[3/2] bg-paper mb-4 overflow-hidden">
+                    <div className="relative w-full aspect-[6/7] bg-paper mb-4 overflow-hidden">
                       <Image
                         src={distancia.mapImage}
                         alt={`Mapa de ruta ${distancia.distance}`}
