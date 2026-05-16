@@ -1,6 +1,7 @@
 import { loadConfig } from "../config";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import PostRaceBanner from "./components/PostRaceBanner";
 import RegistrationBanner from "./components/RegistrationBanner";
 import MisionSection from "./components/MisionSection";
 import EventoSection from "./components/EventoSection";
@@ -11,10 +12,11 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   const config = loadConfig();
+  const navVariant = config.raceOver ? "postRace" : "full";
 
   return (
     <div className="bg-white">
-      <Nav raceOver={config.raceOver} />
+      <Nav variant={navVariant} />
       <Hero
         event={config.event}
         distancias={config.distancias}
@@ -22,28 +24,31 @@ export default function Home() {
       />
 
       {config.raceOver ? (
-        <div className="bg-accent text-ink py-6 px-6 text-center relative z-20">
-          <p className="font-impact text-2xl md:text-3xl uppercase">
-            {config.raceOverMessage}
-          </p>
-        </div>
+        <PostRaceBanner
+          title={config.raceOverBannerTitle}
+          message={config.raceOverMessage}
+        />
       ) : (
         <RegistrationBanner registration={config.registration} />
       )}
 
       <MisionSection registration={config.registration} />
-      <EventoSection
-        preSchedule={config.preSchedule}
-        schedule={config.schedule}
-        location={config.location}
-      />
-      <DistanciasSection distancias={config.distancias} />
-      <InscripcionSection
-        registrationFormUrl={config.registrationFormUrl}
-        raceOver={config.raceOver}
-        raceOverMessage={config.raceOverMessage}
-        registrationDeadline={config.event.registrationDeadline}
-      />
+      {!config.raceOver ? (
+        <>
+          <EventoSection
+            preSchedule={config.preSchedule}
+            schedule={config.schedule}
+            location={config.location}
+          />
+          <DistanciasSection distancias={config.distancias} />
+          <InscripcionSection
+            registrationFormUrl={config.registrationFormUrl}
+            raceOver={false}
+            raceOverMessage={config.raceOverMessage}
+            registrationDeadline={config.event.registrationDeadline}
+          />
+        </>
+      ) : null}
       <AyudaSection
         contacts={config.contacts}
         socialNetworks={config.socialNetworks}

@@ -22,9 +22,12 @@ event:
   maxCapacity: 300
   registrationDeadline: "16 de mayo"
 
-# Toggle to show "race is over" banner and hide registration form
+# When true: thank-you landing — hero without register CTA, large banner headline, misión, ayuda y pie; sin evento/distancias/inscripción.
 raceOver: false
-raceOverMessage: "¡Gracias por participar en la Carrera por la Caridad 2026! Nos vemos el próximo año."
+raceOverBannerTitle: "Gracias"
+raceOverMessage: |
+  ¡Gracias por participar en la Carrera por la Caridad 2026!
+  Nos vemos el próximo año.
 
 # Google Forms embed URL for registration
 registrationFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeBHatDcmNbWfLyBziED359xIvDBWNBvGcbMUIjnUQg12oI4w/viewform?embedded=true"

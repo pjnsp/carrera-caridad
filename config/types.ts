@@ -84,7 +84,11 @@ export interface SocialNetwork {
 
 export interface RaceConfig {
   event: EventConfig;
+  /** When true: minimal thank-you page (hero sans CTA, post-race banner, misión, ayuda, footer only). */
   raceOver: boolean;
+  /** Large headline in the accent stripe when raceOver (e.g. Gracias). */
+  raceOverBannerTitle: string;
+  /** Optional smaller line under the banner title when raceOver. */
   raceOverMessage: string;
   registrationFormUrl: string;
   registration: RegistrationConfig;
