@@ -23,7 +23,7 @@ event:
   registrationDeadline: "16 de mayo"
 
 # When true: thank-you landing — hero without register CTA, large banner headline, misión, ayuda y pie; sin evento/distancias/inscripción.
-raceOver: false
+raceOver: true
 raceOverBannerTitle: "Gracias"
 raceOverMessage: |
   ¡Gracias por participar en la Carrera por la Caridad 2026!
